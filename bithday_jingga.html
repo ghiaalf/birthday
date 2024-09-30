@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Card for Jingga</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            animation: backgroundChange 20s infinite alternate;
+        }
+        
+        @keyframes backgroundChange {
+            0% { background-color: #f0f8ff; }
+            25% { background-color: #ffebcd; }
+            50% { background-color: #e6e6fa; }
+            75% { background-color: #ffe4e1; }
+            100% { background-color: #add8e6; }
+        }
+        
+        .card {
+            background-color: #fff;
+            width: 400px;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            overflow-y: auto;
+            max-height: 90vh;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: scale(1.05);
+        }
+        
+        .card h1 {
+            color: #ff6347;
+            font-size: 24px;
+            animation: fadeIn 1s;
+        }
+        
+        .cake {
+            font-size: 80px;
+            animation: bounce 1s infinite;
+        }
+        
+        .balloons {
+            margin-top: 20px;
+            font-size: 40px;
+        }
+        
+        .message {
+            font-size: 16px;
+            color: #333;
+            text-align: left;
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+
+        .image-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .image-container img {
+            width: 150px; /* Adjust size as needed */
+            height: auto;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ff6347;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: fall 2s infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(500px);
+                opacity: 0;
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="cake">🎂</div>
+        <h1>Happy 20th Birthday, Jingga!</h1>
+        <p>Hello Jingga, happy 20th birthday! 🎉</p>
+        <div class="message">
+            <p>Look at you now, all grown up! I know that whatever life throws your way, you’re strong enough to face it head-on, just like you always have. You’ve come so far, and I’m so proud of you.</p>
+            <p>Jingga, thank you for always being my friend. You were my first friend since high school, and we’ve been through so much together—every stage of our friendship. We’ve laughed, cried, fought, forgiven, misunderstood, and understood each other in ways only true friends can. People say friendships like ours are tough, but I think that’s what makes it so special. If something is too sweet, it can lose its meaning, and if it’s too bitter, it’s hard to enjoy. But what we have is just right, perfectly bittersweet, like we’ve always said.</p>
+            <p>Let’s keep this friendship just as it is, real and full of every emotion. If I ever make mistakes, I hope you’ll tell me, and I promise I’ll do the same for you. We’ll keep growing and learning together, just like we always have. And here’s my wishes for you:</p>
+            <p>You are not only a blessing to everyone around you, but you bring light, love, and joy into the lives of those lucky enough to know you. I am constantly inspired by your kindness, your generosity, and the way you effortlessly make the world a better place just by being in it.</p>
+            <p>Birthdays are a time to celebrate all the wonderful things that make you unique, and today, I celebrate you. Your strength, your laughter, your compassion, and your ability to find beauty in the little things are just a few of the reasons why you’re so special. I admire how you never shy away from being your true, authentic self, and it’s one of the many things that make you irreplaceable.</p>
+            <p>As you embark on this new chapter of life, I hope the year ahead is filled with endless happiness, exciting adventures, and growth that brings you closer to everything you dream of. May each day be brighter than the last, and may you be surrounded by love, not just today but every day. I hope this year brings you all the joy your heart can hold, and more opportunities to shine as brightly as I know you can.</p>
+            <p>Thank you for being you—beautiful, amazing, and one-of-a-kind. I’m so grateful for every memory we’ve shared and can’t wait to make even more in the years to come. Here’s to celebrating you and all the incredible things you have yet to do!</p>
+            <p>I know we’ll see each other again soon, and when we do, it’ll be like no time has passed at all. Until then, know that I’m always here for you, supporting you from afar, celebrating your successes, and holding onto the memories we’ve made and the many more to come.</p>
+            <p>Enjoy every moment today, because you deserve nothing less than the very best. Happy Birthday once again, my dear!</p>
+        </div>
+        <div class="balloons">🎈🎈🎈</div>
+
+        <!-- Image Section -->
+        <div class="image-container">
+            <img src="img/bd1.jpg" alt="i">
+            <img src="img/bd2.jpg" alt="miss">
+            <img src="img/bd3.jpg" alt="you">
+            <img src="img/bd4.jpg" alt="always">
+            <img src="img/bd3.jpg" alt="....">
+        </div>
+    </div>
+    <script>
+        // Create confetti effect
+        function createConfetti() {
+            const confetti = document.createElement('div');
+            confetti.classList.add('confetti');
+            confetti.style.left = Math.random() * 100 + 'vw'; // Random horizontal position
+            document.body.appendChild(confetti);
+            setTimeout(() => {
+                confetti.remove();
+            }, 2000); // Remove confetti after 2 seconds
+        }
+
+        setInterval(createConfetti, 200); // Create confetti every 200ms
+    </script>
+</body>
+</html>
